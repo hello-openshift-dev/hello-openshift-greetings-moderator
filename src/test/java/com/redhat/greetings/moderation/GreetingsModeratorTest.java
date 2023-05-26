@@ -20,14 +20,14 @@ public class GreetingsModeratorTest {
     @Test
     public void testValidContent() {
 
-        Greeting greeting = new Greeting("Hi, there!");
-        assertTrue(greetingModerator.isValid(greeting));
+        ValidateGreetingCommand validateGreetingCommand = new ValidateGreetingCommand("Hi, there!");
+        assertTrue(greetingModerator.isValid(validateGreetingCommand));
     }
 
     @Test
     public void testInValidContent() {
 
-        Greeting greeting = new Greeting("Hi, VMWare!");
-        assertFalse(greetingModerator.isValid(greeting));
+        ValidateGreetingCommand validateGreetingCommand = new ValidateGreetingCommand("Hi, VMWare!");
+        assertFalse(greetingModerator.isValid(validateGreetingCommand));
     }
 }

@@ -9,8 +9,8 @@ public class GreetingModerator {
 
     static final Logger LOGGER = LoggerFactory.getLogger(GreetingModerator.class);
 
-    public boolean isValid(Greeting greeting) {
+    public boolean isValid(ValidateGreetingCommand validateGreetingCommand) {
 
-        return greeting.text().contains("VMWare") ? false : true;
+        return validateGreetingCommand.text().contains("VMWare") ? false : true;
     }
 }
